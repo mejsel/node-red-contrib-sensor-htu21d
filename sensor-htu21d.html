@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sensor-htu21d',{
+        category: 'function',
+        color: '#E9967A',
+        defaults: {
+            i2cNr: {value: 1}
+        },
+        inputs:0,
+        outputs:1,
+        icon: "inject.png",
+        label: function() {
+            return this.name||"sensor-htu21d";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sensor-htu21d">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> I2C device number:</label>
+        <input type="text" id="node-input-host" placeholder="1">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sensor-htu21d">
+    <p>A node to read the digital temperature/humidity sensor HTU21d via I2C interface.</p>
+</script>

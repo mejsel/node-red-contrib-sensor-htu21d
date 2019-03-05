@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-sensor-htu21d",
+  "version": "1.0.0",
+  "description": "Node-red node to read digital temperture/humidity sensor HTU21d via I2C.",
+  "node-red": {
+    "nodes": {
+      "htu21d": "index.js"
+    }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mejsel/node-red-contrib-sensor-htu21d.git"
+  },
+  "keywords": [
+    "htu21d",
+    "temperature",
+    "humidity"
+  ],
+  "author": "Marcel Indlekofer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mejsel/node-red-contrib-sensor-htu21d/issues"
+  },
+  "homepage": "https://github.com/mejsel/node-red-contrib-sensor-htu21d#readme"
+}

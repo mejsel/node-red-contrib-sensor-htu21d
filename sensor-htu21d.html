@@ -1,16 +1,17 @@
 <script type="text/javascript">
     RED.nodes.registerType('sensor-htu21d',{
-        category: 'function',
+        category: 'sensors',
         color: '#E9967A',
         defaults: {
             i2cNr: {value: 1}
         },
-        inputs:0,
+        inputs:1,
         outputs:1,
         icon: "inject.png",
         label: function() {
-            return this.name||"sensor-htu21d";
-        }
+            return this.name||"Htu21d";
+        },
+        paletteLabel: "Htu21d"
     });
 </script>
 

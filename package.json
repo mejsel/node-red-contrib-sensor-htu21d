@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mejsel/node-red-contrib-sensor-htu21d/issues"
   },
-  "homepage": "https://github.com/mejsel/node-red-contrib-sensor-htu21d#readme"
+  "homepage": "https://github.com/mejsel/node-red-contrib-sensor-htu21d#readme",
+  "dependencies": {
+    "sensor-htu21d": "^1.0.1"
+  }
 }

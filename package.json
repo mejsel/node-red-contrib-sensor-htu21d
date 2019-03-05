@@ -4,10 +4,10 @@
   "description": "Node-red node to read digital temperture/humidity sensor HTU21d via I2C.",
   "node-red": {
     "nodes": {
-      "htu21d": "index.js"
+      "htu21d": "sensor-htu21d.js"
     }
   },
-  "main": "index.js",
+  "main": "sensor-htu21d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

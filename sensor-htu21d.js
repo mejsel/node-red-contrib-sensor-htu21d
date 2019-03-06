@@ -2,32 +2,35 @@ let Htu21d = require('sensor-htu21d');
 
 module.exports = function(RED) {
 
-
   function Htu21dNode(config) {
 
     RED.nodes.createNode(this, config);
     var node = this;
-    
 
-    //let htu = new Htu21d(1, 1000);
+    this.device = config.device;
+    this.period = config.period*1000;
+    console.log('this.device', this.device);
+    console.log('this.period', this.period);
 
-    /*
-    htu.on('fertig', (data) => {
-      msg.payload = data;
+    let htu = new Htu21d(Number(this.device), this.period);
+
+    node.status({fill:"grey",shape:"dot",text:"inactive"});
+
+    htu.on('readout-complete', (data) => {
+      var msg = {payload: data};
+      node.status({fill:"green",shape:"dot",text:"active"});
       node.send(msg);
     });
-    */
 
-    //htu.start();
+    htu.on('error', (error) => {
+      node.status({fill:"red",shape:"dot",text:"error"});
+      node.warn(error);
+    });
 
-    var timer = setInterval( () => { 
-      var msg = {payload: "htu timer!"};
-      node.send(msg);
-    }, 1000);
+    htu.start();
 
-    node.on('input', function(msg) {
-      msg.payload = { temperature: 1.23, humidity: 4.56 };
-      node.send(msg);
+    node.on('close', () => {
+      htu.stop();
     });
 
   }

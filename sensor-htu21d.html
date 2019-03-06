@@ -3,9 +3,10 @@
         category: 'sensors',
         color: '#E9967A',
         defaults: {
-            i2cNr: {value: 1}
+            device: {value: 1},
+            period: {value: 5}
         },
-        inputs:1,
+        inputs:0,
         outputs:1,
         icon: "inject.png",
         label: function() {
@@ -17,8 +18,10 @@
 
 <script type="text/x-red" data-template-name="sensor-htu21d">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> I2C device number:</label>
-        <input type="text" id="node-input-host" placeholder="1">
+        <label for="node-input-device"><i class="icon-tag"></i> Device No.:</label>
+        <input type="text" id="node-input-device" placeholder="1">
+        <label for="node-input-period"><i class="icon-tag"></i> Period (s):</label>
+        <input type="text" id="node-input-period" placeholder="5">
     </div>
 </script>
 

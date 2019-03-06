@@ -16,6 +16,7 @@
     "url": "git+https://github.com/mejsel/node-red-contrib-sensor-htu21d.git"
   },
   "keywords": [
+    "node-red",
     "htu21d",
     "temperature",
     "humidity"
@@ -27,6 +28,6 @@
   },
   "homepage": "https://github.com/mejsel/node-red-contrib-sensor-htu21d#readme",
   "dependencies": {
-    "sensor-htu21d": "^1.0.1"
+    "sensor-htu21d": "^1.1.2"
   }
 }

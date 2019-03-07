@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-sensor-htu21d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node-red node to read digital temperture/humidity sensor HTU21d via I2C.",
   "node-red": {
     "nodes": {
